@@ -5,10 +5,8 @@ This is a Maven-based Java application, which is used for parsing a provided web
 ## Pre-requisites
 1.  The environment where this project will be run should have Java 8 setup with environment variables.
 2.  The environment should have Maven build tool configured for building the project.
-3.  To run the project, and running the project as `Spring-Boot` application. This step is important because unless the code is built, the corresponding JAR file will not be present and the application won't run as a Java JAR or as a `Spring-Boot` application.
 
 ## Getting the code
-
 1.  To get the code on your local machine, you can either fork the repository to your account and then clone it into your local machine. 
 2.  Another option will be to directly clone this repository using the below command in your local machine.
 
