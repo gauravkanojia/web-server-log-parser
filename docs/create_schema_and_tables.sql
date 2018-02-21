@@ -1,0 +1,30 @@
+-- Web Server Logs Database creation script
+CREATE DATABASE `web_server_logs`;
+
+-- Daily Access Logs Table creation script
+CREATE TABLE `daily_access_logs` (
+    `_ID` INT(11) NOT NULL AUTO_INCREMENT,
+    `THRESHOLD` INT(10) NOT NULL,
+    `DURATION` VARCHAR(50) NOT NULL,
+    `LOG_TIMESTAMP` VARCHAR(50) NOT NULL,
+    `IP_ADDRESS` VARCHAR(50) NOT NULL,
+    `REQUESTS` VARCHAR(50) NOT NULL,
+    `STATUS` INT(10) NOT NULL,
+    `COMMENTS` VARCHAR(500) NOT NULL,
+    PRIMARY KEY (`_ID`),
+    UNIQUE KEY `IP_ADDRESS` (`IP_ADDRESS`)
+);
+
+-- Hourly Access Logs Table creation script
+CREATE TABLE `hourly_access_logs` (
+    `_ID` INT(11) NOT NULL AUTO_INCREMENT,
+    `THRESHOLD` INT(10) NOT NULL,
+    `DURATION` VARCHAR(50) NOT NULL,
+    `LOG_TIMESTAMP` VARCHAR(50) NOT NULL,
+    `IP_ADDRESS` VARCHAR(50) NOT NULL,
+    `REQUESTS` VARCHAR(50) NOT NULL,
+    `STATUS` INT(10) NOT NULL,
+    `COMMENTS` VARCHAR(500) NOT NULL,
+    PRIMARY KEY (`_ID`),
+    UNIQUE KEY `IP_ADDRESS` (`IP_ADDRESS`)
+);
