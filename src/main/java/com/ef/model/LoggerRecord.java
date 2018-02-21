@@ -23,7 +23,6 @@ public class LoggerRecord {
 	private String ipAddress;
 	private int requests;
 	private String status;
-	private String userAgent;
 	private String comments;
 
 	public LoggerRecord() {
@@ -101,14 +100,6 @@ public class LoggerRecord {
 		this.status = status;
 	}
 
-	public String getUserAgent() {
-		return userAgent;
-	}
-
-	public void setUserAgent(String userAgent) {
-		this.userAgent = userAgent;
-	}
-
 	public String getComments() {
 		return comments;
 	}
@@ -119,7 +110,7 @@ public class LoggerRecord {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ipAddress, startDate, endDate, threshold, duration, userAgent);
+		return Objects.hash(ipAddress, startDate, endDate, threshold, duration);
 	}
 
 	@Override
@@ -133,16 +124,14 @@ public class LoggerRecord {
 				&& Objects.equals(endDate, loggerRecord.endDate)
 				&& Objects.equals(startDate, loggerRecord.startDate) 
 				&& Objects.equals(duration, loggerRecord.duration)
-				&& Objects.equals(ipAddress, loggerRecord.ipAddress)
-				&& Objects.equals(userAgent, loggerRecord.userAgent);
+				&& Objects.equals(ipAddress, loggerRecord.ipAddress);
 	}
 
 	@Override
 	public String toString() {
 		return "LoggerRecord [_id=" + _id + ", startDate=" + startDate + ", endDate=" + endDate + ", threshold="
 				+ threshold + ", duration=" + duration + ", logTimestamp=" + logTimestamp + ", ipAddress=" + ipAddress
-				+ ", requests=" + requests + ", status=" + status + ", userAgent=" + userAgent + ", comments="
-				+ comments + "]";
+				+ ", requests=" + requests + ", status=" + status + ", userAgent=" + ", comments=" + comments + "]";
 	}
 
 }

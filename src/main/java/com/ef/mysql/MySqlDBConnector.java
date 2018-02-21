@@ -196,8 +196,8 @@ public class MySqlDBConnector {
 
 		TextTable textTableForOutput = new TextTable(columnNamesForOutput, rowValues);
 
-		// Sort the table on first column and print it
-		textTableForOutput.setSort(0);
+		// Sort the table on number of requests column and print it
+		textTableForOutput.setSort(3);
 		textTableForOutput.printTable();
 	}
 
