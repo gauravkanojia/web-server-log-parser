@@ -25,7 +25,7 @@ As this is a Maven-based project, the dependencies and build properties are ment
 Go to the project directory. Below is an example:
 
 ```script
-cd /web-server-log-parser/
+cd web-server-log-parser/
 ```
 
 Run the build command:
