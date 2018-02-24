@@ -5,6 +5,8 @@ This is a Maven-based Java application, which is used for parsing a provided web
 ## Pre-requisites
 1.  The environment where this project will be run should have Java 8 setup with environment variables.
 2.  The environment should have Maven build tool configured for building the project.
+3.  For running unit test cases during the build, there should be a MySQL database configured and running with schema `web_server_logs` in place so that the build goes through.
+4.  The instructions to run the build without the test cases are also provided.
 
 ## Getting the code
 1.  To get the code on your local machine, you can either fork the repository to your account and then clone it into your local machine.
@@ -28,14 +30,19 @@ Go to the project directory. Below is an example:
 cd web-server-log-parser/
 ```
 
-Run the build command:
+Run the build command, without the unit test case execution:
+```script
+mvn -U clean install -DskipTests=true
+```
+
+Run the build command, with the unit test case execution:
 ```script
 mvn -U clean install
 ```
 
 Now, if you want to run the `jar` from the target folder, it's necessary to package all the dependent jars as well. This can be achieved using `shade` command.
 ```script
-mvn -U clean install package shade:shade
+mvn -U clean install -DskipTests=true package shade:shade
 ```
 Above command will build the project for the mentioned dependencies and will package it into a JAR file which can be run as any other Java JAR file.
 
@@ -97,4 +104,5 @@ The versions mentioned below are oldest to latest. <br/>
 1.  Eclipse IDE has been used to develop this project.
 2.  This project was tested as a runnable JAR file as well as through the Eclipse Utility `Run Configurations`.
 3.  JUnit test classes have not been written for this project.
-4.  Reach out to me: gisgaurav@gmail.com
+4.  All the `System.out.println` statements should be replaced by `logger` statements for a production ready code.
+5.  Reach out to me: gisgaurav@gmail.com
