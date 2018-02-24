@@ -43,7 +43,7 @@ java -cp target/parser-1.1-SNAPSHOT.jar com.ef.Parser --startDate=2017-01-01.15:
 
 ##### Daily Run
 ```script
-java -cp target/parser-1.0-SNAPSHOT.jar com.ef.Parser --startDate=2017-01-01.00:00:00  --duration=daily --threshold=500 --pathToAccessLog=./access.log --dbUsername=appuser --dbPassword=appuser
+java -cp target/parser-1.1-SNAPSHOT.jar com.ef.Parser --startDate=2017-01-01.00:00:00  --duration=daily --threshold=500 --pathToAccessLog=./access.log --dbUsername=appuser --dbPassword=appuser
 ```
 ##### Arguments params explained
 *   --startDate --> This argument specifies the `start date time` of the logs which needs to be chosen as starting reference point.
