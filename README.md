@@ -38,7 +38,7 @@ The project can be run using the built `jar` file under the `target` folder usin
 
 ##### Hourly Run
 ```script
-java -cp target/parser-1.0-SNAPSHOT.jar com.ef.Parser --startDate=2017-01-01.15:00:00 --duration=hourly --threshold=200 --pathToAccessLog=./access.log --dbUsername=appuser --dbPassword=appuser
+java -cp target/parser-1.1-SNAPSHOT.jar com.ef.Parser --startDate=2017-01-01.15:00:00 --duration=hourly --threshold=200 --pathToAccessLog=./access.log --dbUsername=appuser --dbPassword=appuser
 ```
 
 ##### Daily Run
@@ -80,7 +80,7 @@ SELECT REQUESTS FROM daily_access_logs WHERE IP_ADDRESS = '192.168.62.176';
 ## Versions
 The versions mentioned below are oldest to latest. <br/>
 *   1.0-SNAPSHOT: Initial release with first code shipment.
-*   1.1-SNAPSHOT: Next release with unit tested code and some code cleanup.
+*   1.1-SNAPSHOT: Next release with unit test classes and code cleanup.
 
 ## Useful Links
 *   My SQL Downloads: Use [this](https://dev.mysql.com/downloads/) link to download different flavors of MySQL.  

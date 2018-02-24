@@ -113,6 +113,10 @@ public class Parser {
 					}
 
 					break;
+
+				default:
+					System.out.println(
+							"Please provide valid arguments to execute the parser. Refer to README file for execution commands");
 				}
 			}
 
@@ -121,10 +125,10 @@ public class Parser {
 			// Parse the logs and output on console
 			parseUtil.parseLogsFromInputParams(inputParams);
 			System.out.println("The logs are processed now.");
-			
+
 		} else {
 			// Send messages to the console logs
-			System.out.println("Please provide valid arguments to execute the program. Refer to README file.");
+			System.out.println("Please provide arguments to execute the program. Refer to README file.");
 		}
 	}
 }
