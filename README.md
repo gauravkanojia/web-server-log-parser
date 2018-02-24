@@ -22,6 +22,13 @@ For `Forking` this repository, simply click on the Fork button on the top right 
 ## Build & Package the project
 As this is a Maven-based project, the dependencies and build properties are mentioned in the parent `pom.xml` file. To build the project, simply run the below command in the parent directory where `pom.xml` is present.
 
+Go to the project directory. Below is an example:
+
+```script
+cd /web-server-log-parser/
+```
+
+Run the build command:
 ```script
 mvn -U clean install
 ```
